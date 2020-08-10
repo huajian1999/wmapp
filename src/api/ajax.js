@@ -1,5 +1,5 @@
 /*ajax 请求函数模块
-返回值：propmise对象(异步返回的数据时response.data)
+返回值：propmise对象(异步返回的数据是response.data)
 */
 import axios from 'axios'
 

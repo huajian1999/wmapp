@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   @import "../../common/stylus/mixins.styl"
   .footer_guide  //footer
     top-border-1px(#e4e4e4)

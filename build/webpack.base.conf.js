@@ -67,7 +67,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader:'style-loader!css-loader!stylus-loader'
+        include: [
+          'node_modules/mint-ui/lib/'    // 这里引入mint-ui 的css
+        ],
+        loader:'style-loader!css-loader!stylus-loader',
+        options:{
+          minimize: true, //压缩css代码, 默认false
+        }
       }
     ]
   },

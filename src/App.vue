@@ -7,11 +7,25 @@
 
 <script>
   import FooterNav from './components/FooterNav/FooterNav.vue'
+  import {mapActions} from 'vuex'
 
   export default {
     name: 'App',
     components:{
       FooterNav
+    },
+    // 法一
+    // mounted(){
+    //   this.$store.dispatch('getAddress')
+    // }
+
+    // 法二
+    methods:{
+      ...mapActions(['getAddress','getUserInfo'])
+    },
+    mounted(){
+      this.getAddress();
+      this.getUserInfo();
     }
   }
 </script>
